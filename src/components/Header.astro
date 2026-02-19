@@ -1,0 +1,30 @@
+---
+import { Github } from 'lucide-react';
+---
+
+<header class="fixed top-0 w-full z-50 border-b border-dark-border bg-dark-bg/80 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 group">
+      <div class="w-8 h-8 rounded-lg bg-brand-primary flex items-center justify-center text-white font-bold text-lg">
+        O
+      </div>
+      <span class="font-bold text-xl tracking-tight group-hover:text-brand-primary transition-colors">openDNM</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+      <a href="#features" class="hover:text-white transition-colors">Features</a>
+      <a href="#how-it-works" class="hover:text-white transition-colors">How it Works</a>
+      <a href="#Document" class="hover:text-white transition-colors">Document</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a href="https://github.com" target="_blank" class="hidden sm:flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors">
+        <Github className="w-4 h-4" />
+        <span>Star on GitHub</span>
+      </a>
+      <a href="#get-started" class="bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-zinc-200 transition-colors">
+        Get Started
+      </a>
+    </div>
+  </div>
+</header>

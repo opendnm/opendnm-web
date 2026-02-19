@@ -1,0 +1,87 @@
+<section id="how-it-works" class="py-24 max-w-7xl mx-auto px-6">
+  <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Self-Hosted in Minutes
+      </h2>
+      <div class="space-y-8">
+        <div class="flex gap-4">
+          <div
+            class="shrink-0 w-8 h-8 rounded-full bg-brand-primary text-white flex items-center justify-center font-bold"
+          >
+            1
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Pull the Image</h3>
+            <p class="text-zinc-400 text-sm">
+              Our official Docker image is lightweight (Alpine based) and
+              secure.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div
+            class="shrink-0 w-8 h-8 rounded-full bg-dark-surface border border-dark-border text-zinc-400 flex items-center justify-center font-bold"
+          >
+            2
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Configure Sources</h3>
+            <p class="text-zinc-400 text-sm">
+              Map your `config.yaml` to connect to Route53, Cloudflare, or
+              Namecheap.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div
+            class="shrink-0 w-8 h-8 rounded-full bg-dark-surface border border-dark-border text-zinc-400 flex items-center justify-center font-bold"
+          >
+            3
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Sync & Manage</h3>
+            <p class="text-zinc-400 text-sm">
+              Access the dashboard on localhost:3000 and watch your domains sync
+              automatically.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative group">
+      <div
+        class="absolute -inset-1 bg-linear-to-r from-brand-primary to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"
+      >
+      </div>
+      <div
+        class="relative bg-[#0d1117] rounded-lg border border-dark-border p-4 font-mono text-sm overflow-x-auto"
+      >
+        <div class="flex gap-2 mb-4 border-b border-gray-800 pb-2">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <code class="block text-zinc-300">
+          <span class="text-purple-400">version:</span> '3.8'<br />
+          <span class="text-purple-400">services:</span><br />
+          &nbsp;&nbsp;<span class="text-blue-400">opendnm:</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">image:</span> opendnm/core:latest<br
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">ports:</span><br
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "3000:3000"<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">volumes:</span
+          ><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ./config.yaml:/app/config.yaml<br
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400"
+            >environment:</span
+          ><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- DB_HOST=postgres<br />
+        </code>
+      </div>
+    </div>
+  </div>
+</section>

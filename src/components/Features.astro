@@ -1,0 +1,33 @@
+---
+import { Database, Lock, RefreshCw, Layers, Terminal, Users } from 'lucide-react';
+
+const features = [
+  { icon: Database, title: "Centralized Registry", desc: "Manage providers like GoDaddy, Namecheap, and AWS Route53 in one view." },
+  { icon: Lock, title: "Role-Based Access", desc: "Granular permissions for your DevOps team. Audit logs included out of the box." },
+  { icon: RefreshCw, title: "Auto-Renewals", desc: "Never lose a domain again. Automated webhooks and email alerts for expirations." },
+  { icon: Layers, title: "DNS Management", desc: "Version controlled DNS records. Rollback changes instantly if something breaks." },
+  { icon: Terminal, title: "CLI First", desc: "Everything you can do in the UI, you can do via our robust CLI and API." },
+  { icon: Users, title: "Team Collaboration", desc: "Comments, tagging, and activity feeds for every domain change." },
+];
+---
+
+<section id="features" class="py-24 bg-dark-surface border-y border-dark-border">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Built for Engineering Teams</h2>
+      <p class="text-zinc-400 max-w-2xl mx-auto">Stop managing domains in spreadsheets. openDNM brings DevOps practices to domain management.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feature) => (
+        <div class="p-6 rounded-2xl bg-dark-bg border border-dark-border hover:border-brand-primary/50 transition-colors group">
+          <div class="w-12 h-12 rounded-lg bg-dark-surface border border-dark-border flex items-center justify-center mb-4 group-hover:bg-brand-primary/10 group-hover:text-brand-primary transition-colors">
+            <feature.icon className="w-6 h-6" />
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-white">{feature.title}</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">{feature.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+---
+import { Check, X } from 'lucide-react';
+---
+
+<section class="py-24 bg-dark-surface/20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">Why openDNM?</h2>
+      <p class="text-zinc-400">The difference between "keeping track" and "staying in control".</p>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse min-w-150">
+        <thead>
+          <tr class="border-b border-dark-border">
+            <th class="py-6 px-4 text-zinc-500 font-medium">Feature</th>
+            <th class="py-6 px-4 text-zinc-500 font-medium italic">Traditional Tools</th>
+            <th class="py-6 px-4 text-brand-primary font-bold">openDNM (Open Source)</th>
+          </tr>
+        </thead>
+        <tbody class="text-zinc-300">
+          {[
+            { f: "Multi-Provider Sync", old: false, new: true },
+            { f: "Automatic SSL Tracking", old: false, new: true },
+            { f: "Team RBAC Permissions", old: "Manual", new: true },
+            { f: "API & Webhook Access", old: "Limited", new: true },
+            { f: "Data Ownership", old: "Vendor Lock-in", new: "Self-Hosted / 100% Yours" },
+            { f: "Cost", old: "$$$ Monthly", new: "Free / MIT License" }
+          ].map(row => (
+            <tr class="border-b border-dark-border group hover:bg-white/2 transition-colors">
+              <td class="py-6 px-4 font-medium text-white">{row.f}</td>
+              <td class="py-6 px-4 text-zinc-500">
+                {row.old === false ? <X className="w-5 h-5 text-zinc-700" /> : row.old}
+              </td>
+              <td class="py-6 px-4">
+                {row.new === true ? (
+                  <div class="flex items-center gap-2 text-emerald-400 font-semibold">
+                    <Check className="w-5 h-5" /> Enabled
+                  </div>
+                ) : <span class="text-white font-semibold">{row.new}</span>}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

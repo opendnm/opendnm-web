@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #6366f1;
+  --color-dark-bg: #030303;
+  --color-dark-surface: #0a0a0a;
+  --color-dark-border: #1a1a1a;
+}
+
+@layer base {
+  html {
+    /* 将背景色放在最底层 */
+    background-color: var(--color-dark-bg);
+    color: #ffffff;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    /* 确保 body 不会遮挡背景 */
+    background: transparent;
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .bg-dot-grid {
+    /* 使用 fixed 或 absolute 视情况而定，这里建议在 Section 内使用 absolute */
+    background-image: radial-gradient(circle, #222 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}

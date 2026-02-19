@@ -1,0 +1,18 @@
+---
+const faqs = [
+  { q: "Is it really free?", a: "Yes, openDNM is licensed under MIT. You can host it yourself for free forever." },
+  { q: "Which providers are supported?", a: "We support over 20+ major registrars and DNS providers through our unified driver system." },
+  { q: "Can I use it for enterprise?", a: "Absolutely. It includes RBAC, Audit Logs, and Prometheus metrics for enterprise monitoring." }
+];
+---
+<section class="py-24 max-w-3xl mx-auto px-6">
+  <h2 class="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+  <div class="space-y-6">
+    {faqs.map(faq => (
+      <div class="p-6 rounded-xl bg-dark-surface border border-dark-border">
+        <h3 class="text-lg font-bold text-white mb-2">{faq.q}</h3>
+        <p class="text-zinc-400">{faq.a}</p>
+      </div>
+    ))}
+  </div>
+</section>

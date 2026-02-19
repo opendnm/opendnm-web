@@ -1,0 +1,60 @@
+---
+import { Github, Twitter, Facebook, Linkedin, Disc as Discord } from 'lucide-react';
+
+const socials = [
+  { icon: Github, href: "#", label: "GitHub" },
+  { icon: Twitter, href: "#", label: "X" },
+  { icon: Discord, href: "#", label: "Discord" },
+  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Facebook, href: "#", label: "Facebook" },
+];
+---
+<footer class="pt-20 pb-10 border-t border-dark-border bg-dark-bg">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+      <div class="col-span-2">
+        <a href="/" class="flex items-center gap-2 mb-6">
+          <div class="w-8 h-8 rounded-lg bg-brand-primary flex items-center justify-center text-white font-bold">O</div>
+          <span class="font-bold text-xl uppercase tracking-tighter italic">openDNM</span>
+        </a>
+        <p class="text-zinc-500 max-w-xs mb-6">
+          The professional open source domain management platform for modern engineering teams.
+        </p>
+        <div class="flex gap-4">
+          {socials.map(social => (
+            <a href={social.href} class="text-zinc-500 hover:text-brand-primary transition-colors" aria-label={social.label}>
+              <social.icon className="w-5 h-5" />
+            </a>
+          ))}
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="text-white font-bold mb-6">Platform</h4>
+        <ul class="space-y-4 text-zinc-500 text-sm font-medium">
+          <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Integrations</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">CLI Tool</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-6">Company</h4>
+        <ul class="space-y-4 text-zinc-500 text-sm font-medium">
+          <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">GitHub</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Security</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="pt-8 border-t border-dark-border flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-zinc-600 text-xs">© 2026 openDNM Project. Built with Astro & Tailwind v4.</p>
+      <div class="flex gap-6 text-xs text-zinc-600">
+        <a href="#" class="hover:text-white">Privacy</a>
+        <a href="#" class="hover:text-white">Terms</a>
+        <a href="#" class="hover:text-white">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
