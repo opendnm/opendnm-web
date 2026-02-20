@@ -11,5 +11,7 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [react()]
+  integrations: [react()],
+  site: 'https://www.opendnm.com',
+  base: '/opendnm-web/',
 });
