@@ -13,5 +13,4 @@ export default defineConfig({
 
   integrations: [react()],
   site: 'https://www.opendnm.com',
-  base: '/opendnm-web/',
 });
